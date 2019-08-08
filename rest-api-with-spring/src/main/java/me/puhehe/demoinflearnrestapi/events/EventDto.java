@@ -2,16 +2,10 @@ package me.puhehe.demoinflearnrestapi.events;
 
 import lombok.*;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Builder @AllArgsConstructor @NoArgsConstructor
-@Getter @Setter @EqualsAndHashCode(of = "id")
-@Entity
-public class Event {
-
-    @Id @GeneratedValue
-    private Integer id;
+@Data @Builder @NoArgsConstructor @AllArgsConstructor
+public class EventDto {
     private String name;
     private String description;
     private LocalDateTime beginEnrollmentDateTime;
@@ -22,8 +16,4 @@ public class Event {
     private int basePrice;      // (optional)
     private int maxPrice;       // (optional)
     private int limitOfEnrollment;  // (optional)
-    private boolean offline;
-    private boolean free;
-    @Enumerated(EnumType.STRING)
-    private EventStatus eventStatus = EventStatus.DRAFT;
 }
