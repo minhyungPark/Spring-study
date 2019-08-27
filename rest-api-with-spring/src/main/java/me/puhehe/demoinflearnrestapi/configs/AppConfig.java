@@ -35,7 +35,7 @@ public class AppConfig {
             AccountService accountService;
 
             @Override
-            public void run(ApplicationArguments args) throws Exception {
+            public void run(ApplicationArguments args) {
                 Account minhyung = Account.builder()
                         .email("puhehe99@email.com")
                         .password("minhyung")
